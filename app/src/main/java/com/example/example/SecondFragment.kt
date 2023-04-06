@@ -14,6 +14,7 @@ class SecondFragment : Fragment() {
     lateinit var binding: FragmentSecondBinding
     lateinit var adapter: GameAdapter
     val navController by lazy { findNavController() }
+    private var gameDesc: String? = null
     private var gameName: String? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,9 +29,11 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
-            gameName = it.getString("myTextView")
+            gameDesc = it.getString("myTextView")
+            gameName = it.getString("myTextView2")
         }
-        binding.textView.text = gameName
+        binding.textView.text = gameDesc
+        binding.textView2.text = gameName
 
     }
 }
