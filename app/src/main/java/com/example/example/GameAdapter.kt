@@ -18,7 +18,7 @@ class GameAdapter(
     inner class GamesHolder(val binding: ItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bindView(game: Game, position: Int) {
             binding.tv1.text = game.name
-            binding.tv2.text = game.ReleaseDate.toString()
+            binding.tv2.text = game.Company
             Glide.with(context)
                 .load(game.ResId)
                 .into(binding.imageView)
