@@ -29,9 +29,8 @@ class GameAdapter(
                 bundle.putString("myTextView", game.Description)
                 bundle.putString("myTextView2", game.name)
                 navController.navigate(R.id.firstToSecond, bundle)
-
-
             }
+
 
         }
     }

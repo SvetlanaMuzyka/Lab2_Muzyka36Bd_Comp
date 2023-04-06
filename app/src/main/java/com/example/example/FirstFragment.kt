@@ -34,28 +34,12 @@ class FirstFragment : Fragment() {
 
         adapter = GameAdapter(requireContext()) { game, position ->
             Toast.makeText(requireContext(), "${game.name}", Toast.LENGTH_SHORT).show()
-//            Glide.with(requireContext())
-//                .load(game.ResId)
-//               .into(binding.imageView)
-//            binding.info.setOnClickListener {
-//                onClick(game, position)
-//               val navController = binding.root.findNavController()
-//               val bundle = Bundle()
-//               bundle.putString("myTextView", game.Description)
-//                navController.navigate(R.id.firstToSecond, bundle)
-//
-//
-//           }
 
 
         }
         adapter.setNewData(createGames())
         rw.adapter = adapter
     }
-
-//    private fun onClick(game: Game, position: Int) {
-//
-//    }
 
 
 }
