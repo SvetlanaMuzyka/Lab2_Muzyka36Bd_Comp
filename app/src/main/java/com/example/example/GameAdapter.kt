@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.example.databinding.ItemBinding
 
+
 class GameAdapter(
     val context: Context,
     val onClick: (model: Game, position: Int) -> Unit,
@@ -26,8 +27,11 @@ class GameAdapter(
                 onClick(game, position)
                 val navController = binding.root.findNavController()
                 val bundle = Bundle()
-                bundle.putString("myTextView", game.Description)
-                bundle.putString("myTextView2", game.name)
+                bundle.putString("Description", "Description: ${game.Description}")
+                bundle.putString("Name", "Name: ${game.name}")
+                bundle.putString("Genre", "Genre: ${game.Genre}")
+                bundle.putString("Company", "Company: ${game.Company}")
+                bundle.putString("DateOfRelease", "Game release: ${game.ReleaseDate}")
                 navController.navigate(R.id.firstToSecond, bundle)
             }
 
